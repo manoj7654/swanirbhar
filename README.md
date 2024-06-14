@@ -201,7 +201,7 @@
 
 
 ### Authentication
-- Authentication is the process of verifying the identity of a user. In this E-Learning Platform API, authentication is implemented using JWT (JSON Web Tokens).
+- Authentication is the process of verifying the identity of a user. In this course management api for lms, authentication is implemented using JWT (JSON Web Tokens).
 
 ### Authorization
 - Authorization determines what an authenticated user is allowed to do. Different user roles 
