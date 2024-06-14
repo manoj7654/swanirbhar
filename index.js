@@ -7,6 +7,7 @@ const { courseRouter } = require('./routes/courseRouter');
 const { progressRouter } = require('./routes/progressRouter');
 const { lessonRouter } = require('./routes/lessonRouter');
 const swaggerRouter = require('./swagger');
+const errorHandler = require('./middleware/errHandler');
 
 
 require('dotenv').config();
@@ -20,6 +21,7 @@ app.use("/",courseRouter)
 app.use("/",progressRouter)
 app.use("/",lessonRouter)
 app.use(swaggerRouter)
+app.use(errorHandler)
 connection.sync({ force: false })  // Set to true to reset the database on every server restart
   .then(() => {
     console.log('Database & tables created!');
