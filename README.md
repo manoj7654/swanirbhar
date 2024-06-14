@@ -1,3 +1,7 @@
+# Course Management API for LMS
+- This project is a RESTful API for a Course Management System within an LMS. The API supports functionalities for user authentication, course management (CRUD operations), and progress tracking. The project demonstrates the developer’s ability to handle databases, secure endpoints, and manage relationships between different entities.
+
+
 ## Technologies Used
 - Node.js
 - Express.js
