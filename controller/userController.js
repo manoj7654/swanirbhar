@@ -1,6 +1,7 @@
 const User=require("../modal/userModal");
 const bcrypt=require("bcrypt")
-const jwt=require("jsonwebtoken")
+const jwt=require("jsonwebtoken");
+const { redisClient } = require("../config/redis");
 require("dotenv").config()
 
 const register = async (req, res) => {
@@ -33,6 +34,7 @@ const login = async (req, res) => {
         return res.status(401).json({ error: 'Invalid email or password' });
       }
       const token=jwt.sign({userId:user.id,role:user.role},process.env.secret );
+      await redisClient.set("token",token,{EX:5*60})
       res.status(200).json({message:"Login successfull", token });
     } catch (error) {
       res.status(500).json({ error: 'Internal server error' });

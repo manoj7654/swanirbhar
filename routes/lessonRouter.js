@@ -162,7 +162,7 @@ lessonRouter.get('/lessons/:id',authenticate,getLessonById);
  *               summary: Example lesson
  *               value:
  *                 title: Updated Lesson Title
- *                 description: Updated Lesson description
+ *                 content: Updated Lesson content
  *     responses:
  *       200:
  *         description: Lesson updated successfully

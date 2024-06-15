@@ -1,8 +1,9 @@
 const jwt = require("jsonwebtoken");
+const { redisClient } = require("../config/redis");
 require("dotenv").config();
 
 const authenticate = async (req, res, next) => {
-    const token = req.headers.authorization;
+    const token = req.headers.authorization || `${await redisClient.get("token")}`;
     try {
         if (token) {
             const decode = jwt.verify(token, process.env.secret); 
