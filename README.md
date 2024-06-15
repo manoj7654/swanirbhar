@@ -206,3 +206,10 @@
 ### Authorization
 - Authorization determines what an authenticated user is allowed to do. Different user roles 
 
+### Deployed Link
+  [Live](https://swanirbhar-b1wr.onrender.com/)
+
+### Swagger Link
+
+  [Swagger](https://swanirbhar-b1wr.onrender.com/api-docs)
+
