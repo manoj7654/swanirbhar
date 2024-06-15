@@ -16,6 +16,10 @@ const app = express();
 
 app.use(bodyParser.json());
 
+app.get("/",(req,res)=>{
+  res.send("Welcome to the Course Management API")
+})
+
 app.use('/', userRouter);
 app.use("/",courseRouter)
 app.use("/",progressRouter)
